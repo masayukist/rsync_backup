@@ -1,0 +1,5 @@
+# specify the directory whose backup is taken
+export ORIG_DIR=/export
+
+# rsync additional options
+export RSYNC_OPT="-avl"
