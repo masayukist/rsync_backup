@@ -4,8 +4,13 @@ set -euo pipefail
 
 export BACKUP_ROOT=$(cd $(dirname ${0}) && pwd)
 
-if [ ! -e ${BACKUP_ROOT}/config.sh ]; then
-    echo ERROR: generate ${BACKUP_ROOT}/config.sh based on ${BACKUP_ROOT}/config.sh.sample
+if [ ! -e ${BACKUP_ROOT}/config.bash ]; then
+    echo ERROR: generate ${BACKUP_ROOT}/config.bash based on ${BACKUP_ROOT}/config.bash.sample
+    exit 1
+fi
+
+if [ ! -e ${BACKUP_ROOT}/exclude.ptn ]; then
+    echo ERROR: generate ${BACKUP_ROOT}/exclude.ptn based on ${BACKUP_ROOT}/exclude.ptn.sample
     exit 1
 fi
 
@@ -13,7 +18,7 @@ YEAR=`date +%Y`
 MONTH=`date +%m`
 DAY=`date +%d`
 
-source ${BACKUP_ROOT}/config.sh
+source ${BACKUP_ROOT}/config.bash
 
 export BACKUP_DIR=${BACKUP_ROOT}/data
 export RSYNC_EXCLUDE_FILE=${BACKUP_ROOT}/exclude.ptn

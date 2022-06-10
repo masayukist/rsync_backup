@@ -2,4 +2,4 @@
 export ORIG_DIR=/export
 
 # rsync additional options
-export RSYNC_OPT="-avl"
+export RSYNC_OPT="-av"
