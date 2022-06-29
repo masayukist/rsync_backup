@@ -1,5 +1,8 @@
 # specify the directory whose backup is taken
-export ORIG_DIR=/export
+export ORIG_DIR=/home
+# if DEST_URI is empty, it is set automatically. Use this variable for rsync://... ex->
+# export DEST_URI=rsync://xxx.xxx.xxx.xxx/....
+export DEST_URI=
 
 # rsync additional options
 export RSYNC_OPT="-av"

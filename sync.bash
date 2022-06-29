@@ -20,7 +20,7 @@ DAY=`date +%d`
 
 source ${BACKUP_ROOT}/config.bash
 
-export BACKUP_DIR=${BACKUP_ROOT}/data
+export DEST_DIR=${BACKUP_ROOT}/data
 export RSYNC_EXCLUDE_FILE=${BACKUP_ROOT}/exclude.ptn
 export RSYNC_LOG_DIR=${BACKUP_ROOT}/log/${YEAR}/${MONTH}
 export RSYNC_LOG_FILE=${RSYNC_LOG_DIR}/${DAY}.log
