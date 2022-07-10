@@ -6,3 +6,8 @@ export DEST_URI=
 
 # rsync additional options
 export RSYNC_OPT="-av"
+
+# WEEKDAY=`date +%u`
+# if [ "$WEEKDAY" -eq 7 ]; then
+#         export RSYNC_OPT="${RSYNC_OPT} -v --max-size=10M"
+# fi
